@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gustavo Cawthon - Network</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #121212;
+      overflow-y: hidden;
+    }
+
+    #links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .items_links {
+      background-color: #000;
+      border: 2px solid #fff;
+      color: #fff;
+      width: 90%;
+      max-width: 300px;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .items_links:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #1b2eff;
+    }
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .items_links {
+        padding: 1rem;
+      }
+
+      i {
+        font-size: 1.2rem;
+      }
+
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="container_app">
+    <section id="links">
+      <div class="items_links">
+        <i class="bi bi-youtube"></i>
+        <a href="https://youtube.com/@gustavocawthon?si=CCOyOwBKAMPFsP0V">YouTube</a>
+      </div>
+
+      <div class="items_links">
+        <i class="bi bi-linkedin"></i>
+        <a href="https://www.linkedin.com/in/gustavo-cawthon-a6371b297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+      </div>
+
+      <div class="items_links">
+        <i class="bi bi-github"></i>
+        <a href="https://github.com/GustavoCawthon8">GitHub</a>
+      </div>
+
+      <div class="items_links">
+        <i class="bi bi-file-earmark-fill"></i>
+        <a href="https://portifoliogustavocawthon.netlify.app/">Portfólio</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { Menu } from "./menu.js";
+
+    const config = {
+      imageLogo: 1
+    };
+    Menu.menu(config);
+  </script>
+</body>
+
+</html>

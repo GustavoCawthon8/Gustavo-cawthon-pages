@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gustavo Cawthon - PlayList</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1E3C72, #2a5298);
+      color: #ffffff;
+    }
+
+    #title {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffdf6c;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #playlist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .playlists {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .playlists:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .playlists img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .playlists h1 {
+      font-size: 1.2rem;
+      margin: 15px 10px 5px;
+      color: #ffdf6c;
+    }
+
+    .playlists p {
+      font-size: 0.9rem;
+      margin: 0 10px 15px;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .playlists a {
+      display: inline-block;
+      background: #ff4b5c;
+      color: #ffffff;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .playlists a:hover {
+      background: #ff6f61;
+    }
+  </style>
+</head>
+
+<body>
+  <main id="container_app">
+    <section>
+      <h1 id='title'>PlayList</h1>
+    </section>
+
+    <section id="playlist">
+      <div class="playlists">
+        <img src="src/imagePl/pl1.png" alt="Thumbnail da playlist">
+        <h1>Maratona completa de Java</h1>
+        <p>Uma playlist completa ensinando a linguagem Java para Its Magic Engine.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzMhU03cWnyZY9yZ7zm36HVk&si=orfOzTIkDALRLm-E">Acessar</a>
+      </div>
+
+      <div class="playlists">
+        <img src="src/imagePl/pl2.png" alt="Thumbnail da playlist">
+        <h1>Maratona completa de Threejs</h1>
+        <p>Uma playlist que maratona todos os fundamentos do threejs.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzNV9f2K20-y7U_XZ8qbII4c&si=rf101dyzahBcdlI3">Acessar</a>
+      </div>
+
+      <div class="playlists">
+        <img src="src/imagePl/pl3.png" alt="Thumbnail da playlist">
+        <h1>player na three environment</h1>
+        <p>Uma playlist que eu ensino a cria um player em primeira pessoa do zero.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzNudJvUTfNg9XFiGCdmQ8TH&si=O_x_-nHV53RIXJpQ">Acessar</a>
+      </div>
+
+      <div class="playlists">
+        <img src="src/imagePl/pl4.png" alt="Thumbnail da playlist">
+        <h1>Maratona completa de C#</h1>
+        <p>Playlist completa de cSharp para its magic engine.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzOXcv4j5nHOPCuegnTsgYZ2&si=Zy2HweuUVHy6yDdl">Acessar</a>
+      </div>
+
+      <div class="playlists">
+        <img src="src/imagePl/pl5.png" alt="Thumbnail da playlist">
+        <h1>Criando um Mk do zero</h1>
+        <p>Playlist completa, que eu crio um jogo do zero com html, css e javascript.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzMaojvhfx5Hj3bSFSe2IH1_&si=N3LuT0a8mFoPjTmR">Acessar</a>
+      </div>
+
+      <div class="playlists">
+        <img src="src/imagePl/pl6.png" alt="Thumbnail da playlist">
+        <h1>Sistemas para its magic engine</h1>
+        <p>Playlist completa, que você vai aprender a cria alguns sistemas em java para its magic engine.</p>
+        <a href="https://youtube.com/playlist?list=PLsoM651adEzPi9SvGeXTEDEG57_KNoSqc&si=wRPKy7oXydifsq6v">Acessar</a>
+      </div>
+
+    </section>
+  </main>
+  
+  <script type="module">
+    import { Menu } from "./menu.js";
+
+    const config = {
+      imageLogo: 1
+    }
+    Menu.menu(config);
+  </script>
+</body>
+
+</html>
